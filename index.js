@@ -11,5 +11,13 @@
 // const customGreet = createGreeter("Screw");
 // customGreet("ScrewY");
 
-let age = Number("abdullah al Noman");
-console.log(age);
+let user = new Object();
+let User = {};
+user = {
+  name: "John",
+  age: 30,
+  "likes birds": true,
+};
+
+delete user["likes birds"];
+console.log(user);
