@@ -11,20 +11,33 @@
 // const customGreet = createGreeter("Screw");
 // customGreet("ScrewY");
 
-let user = new Object();
-user = {
+// let user = new Object();
+// user = {
+//   name: "John",
+//   age: 30,
+//   "likes birds": true,
+// };
+
+// const x = function () {
+//   return {
+//     49: "Germany",
+//     41: "Switzerland",
+//     44: "Great Britain",
+//     1: "USA",
+//   };
+// };
+
+// console.log(x());
+
+let user = {
   name: "John",
   age: 30,
-  "likes birds": true,
 };
 
-const x = function () {
-  return {
-    49: "Germany",
-    41: "Switzerland",
-    44: "Great Britain",
-    1: "USA",
-  };
-};
+let clone = {};
+// for(let key in user){
+//    clone[key] = user[key];
+// }
 
-console.log(typeof x());
+Object.assign(clone,user);
+console.log(clone);
