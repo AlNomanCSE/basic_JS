@@ -29,15 +29,16 @@
 
 // console.log(x());
 
-let user = {
-  name: "John",
-  age: 30,
-};
+function User(name) {
+  this.name = name;
+  this.fun = ()=>{
+    console.log("hello");
+  }
+  this.toString = ()=>{
+    return `Hello ${name}`
+  }
+}
 
-let clone = {};
-// for(let key in user){
-//    clone[key] = user[key];
-// }
+let user = new User('Noman');
 
-Object.assign(clone,user);
-console.log(clone);
+console.log(user.toString());
