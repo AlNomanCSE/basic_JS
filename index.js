@@ -29,16 +29,19 @@
 
 // console.log(x());
 
-function User(name) {
-  this.name = name;
-  this.fun = ()=>{
-    console.log("hello");
-  }
-  this.toString = ()=>{
-    return `Hello ${name}`
-  }
-}
+let user = {
+  name: "John",
 
-let user = new User('Noman');
+  for hint="string"
+  toString() {
+    return `{name: "${this.name}"}`;
+  },
 
-console.log(user.toString());
+  // for hint="number" or "default"
+  valueOf() {
+    return `${this.money}`;
+  },
+};
+
+let x = +prompt("Enter number");
+console.log(+"abc");
