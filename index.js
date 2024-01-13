@@ -46,8 +46,12 @@
 // let x = +prompt("Enter number");
 // console.log(+"abc");
 
-
 // console.log('Abdullah Al Noman!'.slice(5,-1));
+let map = new Map();
+map.set("1", "str1").set(1, "num1").set(true, "bool1");
 
-console.log("z".codePointAt(0).toString(8));
-console.log(String.fromCodePoint(64));
+map.forEach((value,key,ary)=>{
+  console.log(value," ",key," ",ary);
+});
+
+console.log(map.get("1"));
