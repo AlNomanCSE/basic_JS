@@ -29,19 +29,25 @@
 
 // console.log(x());
 
-let user = {
-  name: "John",
+// let user = {
+//   name: "John",
 
-  for hint="string"
-  toString() {
-    return `{name: "${this.name}"}`;
-  },
+//   // for hint="string"
+//   // toString() {
+//   //   return `{name: "${this.name}"}`;
+//   // },
 
-  // for hint="number" or "default"
-  valueOf() {
-    return `${this.money}`;
-  },
-};
+//   // // for hint="number" or "default"
+//   // valueOf() {
+//   //   return `${this.money}`;
+//   // },
+// };
 
-let x = +prompt("Enter number");
-console.log(+"abc");
+// let x = +prompt("Enter number");
+// console.log(+"abc");
+
+
+// console.log('Abdullah Al Noman!'.slice(5,-1));
+
+console.log("z".codePointAt(0).toString(8));
+console.log(String.fromCodePoint(64));
