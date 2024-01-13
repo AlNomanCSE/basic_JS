@@ -47,11 +47,19 @@
 // console.log(+"abc");
 
 // console.log('Abdullah Al Noman!'.slice(5,-1));
+// let obj = {
+//   name: "John",
+//   age: 30,
+// };
+
+// const map  = new Map(Object.entries(obj));
+// console.log(Object.entries(obj));
+
+
+
 let map = new Map();
-map.set("1", "str1").set(1, "num1").set(true, "bool1");
+map.set("banana", 1);
+map.set("orange", 2);
+map.set("meat", 4);
 
-map.forEach((value,key,ary)=>{
-  console.log(value," ",key," ",ary);
-});
-
-console.log(map.get("1"));
+console.log(Object.fromEntries(map));
