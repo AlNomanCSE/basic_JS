@@ -68,12 +68,47 @@ map.set("meat", 4);
 // // let y = Object.fromEntries(x);
 // // let z  = Object.entries(y);
 // console.log(Object.keys(map));
-let options = {
-  title: "Menu",
-  width: 100,
-  height: 200,
-};
+// let options = {
+//   title: "Menu",
+//   width: 100,
+//   height: 200,
+// };
 
-let { width: w, height, title } = options;
+// let { width: w, height, title } = options;
 
-console.log(w);
+// console.log(w);
+
+function showmA({ title = "Menu", width = 100, height = 200 } = {}) {
+  console.log(title, width, height);
+}
+showmA();
+
+// let room = {
+//   number: 23,
+// };
+
+// let meetup = {
+//   title: "Conference",
+//   participants: ["john", "ann"],
+// };
+// console.log(
+//   JSON.stringify(meetup, ["number", "title", "participants"],4)
+// );
+let json = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+console.log(JSON.parse(json).date);
+
+let schedule = `{
+  "meetups": [
+    {"title":"Conference","date":"2017-11-30T12:00:00.000Z"},
+    {"title":"Birthday","date":"2017-04-18T12:00:00.000Z"}
+  ]
+}`;
+
+schedule = JSON.parse(schedule,function(key,value){
+     if(key=='date'){
+      return new Date(value);
+     }
+     return value
+});
+
+console.log(schedule.meetups[0].date.getDate());
