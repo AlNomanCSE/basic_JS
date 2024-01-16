@@ -111,18 +111,25 @@
 //      return value
 // });
 
-let user = {
-  firstName: "John",
-  func: (phrase) => {
-    console.log(phrase + ", " + this.firstName);
-  },
-};
+// let animal = {
+//   eats: true,
+// };
 
-let us = function (phrase) {
-  user.func.bind(phrase);
-};
+// function Rabbit(name) {
+//   this.name = name;
+// }
 
-us("Hello! ");
-
+// Rabbit.prototype = animal;
+// let rabbit = new Rabbit("White");
+// console.log(rabbit);
 
 
+// let obj = {};
+// console.log(obj.__proto__);
+// console.log(Object.prototype);
+
+try {
+  hjjj;
+} catch (error) {
+    console.log(error);
+}
