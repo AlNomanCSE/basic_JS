@@ -50,10 +50,10 @@
 // const map  = new Map(Object.entries(obj));
 // console.log(Object.entries(obj));
 
-let map = new Map();
-map.set("banana", 1);
-map.set("orange", 2);
-map.set("meat", 4);
+// let map = new Map();
+// map.set("banana", 1);
+// map.set("orange", 2);
+// map.set("meat", 4);
 // console.log(map.entries());
 // console.log(Object.fromEntries(map));
 
@@ -78,10 +78,10 @@ map.set("meat", 4);
 
 // console.log(w);
 
-function showmA({ title = "Menu", width = 100, height = 200 } = {}) {
-  console.log(title, width, height);
-}
-showmA();
+// function showmA({ title = "Menu", width = 100, height = 200 } = {}) {
+//   console.log(title, width, height);
+// }
+// showmA();
 
 // let room = {
 //   number: 23,
@@ -94,21 +94,35 @@ showmA();
 // console.log(
 //   JSON.stringify(meetup, ["number", "title", "participants"],4)
 // );
-let json = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
-console.log(JSON.parse(json).date);
+// let json = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+// console.log(JSON.parse(json).date);
 
-let schedule = `{
-  "meetups": [
-    {"title":"Conference","date":"2017-11-30T12:00:00.000Z"},
-    {"title":"Birthday","date":"2017-04-18T12:00:00.000Z"}
-  ]
-}`;
+// let schedule = `{
+//   "meetups": [
+//     {"title":"Conference","date":"2017-11-30T12:00:00.000Z"},
+//     {"title":"Birthday","date":"2017-04-18T12:00:00.000Z"}
+//   ]
+// }`;
 
-schedule = JSON.parse(schedule,function(key,value){
-     if(key=='date'){
-      return new Date(value);
-     }
-     return value
-});
+// schedule = JSON.parse(schedule,function(key,value){
+//      if(key=='date'){
+//       return new Date(value);
+//      }
+//      return value
+// });
 
-console.log(schedule.meetups[0].date.getDate());
+let user = {
+  firstName: "John",
+  func: (phrase) => {
+    console.log(phrase + ", " + this.firstName);
+  },
+};
+
+let us = function (phrase) {
+  user.func.bind(phrase);
+};
+
+us("Hello! ");
+
+
+
