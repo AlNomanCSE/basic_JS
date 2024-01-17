@@ -127,13 +127,9 @@
 // console.log(obj.__proto__);
 // console.log(Object.prototype);
 
-new Promise(function (resolve, reject) {
-  resolve("Done!");
-})
-  .then((text) => {
-    console.log(typeof text);
-    return text;
-  })
-  .then(function (text) {
-    console.log(typeof text);
-  });
+async function saw() {
+  let response = await fetch("https://api.github.com/users/iliakan");
+  let user = await response.json();
+  console.log(user);
+}
+saw();
